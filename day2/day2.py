@@ -13,7 +13,7 @@ def check_if_valid(password):
         word = x[3]
         appear = word.count(letter)
         # Challenge one
-        if appear <= big and appear >= small:
+        if small <= appear <= big:
             count_one += 1
         
         # Challenge two
