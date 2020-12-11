@@ -14,8 +14,6 @@ def pass_to_dict(pass_list):
 
     return pass_dict
 
-passports = [pass_to_dict(x) for x in split_lines]
-
 def valid_fields(passport):
     birth = "byr" in passport
     issue = "iyr" in passport
@@ -80,6 +78,8 @@ def check_pid(passport_id):
             break
     
     return valid
+
+passports = [pass_to_dict(x) for x in split_lines]
 
 valid_count = [passport for passport in passports if valid_fields(passport)]
 print(len(valid_count))
